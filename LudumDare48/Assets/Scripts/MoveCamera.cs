@@ -5,7 +5,7 @@ using UnityEngine;
 public class MoveCamera : MonoBehaviour
 {
     [SerializeField]
-    private GameObject squid;
+    private GameObject octopus;
 
     [SerializeField]
     private float speed = 2.5f;
@@ -19,7 +19,7 @@ public class MoveCamera : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector3 direction = squid.transform.position - this.transform.position;
+        Vector3 direction = octopus.transform.position - this.transform.position;
         direction.z = 0f;
         this.transform.position += direction.normalized * speed * Time.deltaTime;
     }

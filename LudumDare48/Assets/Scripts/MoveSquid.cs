@@ -43,7 +43,8 @@ public class MoveSquid : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             isSwimming = true;
-            animator.SetTrigger("Swim");
+            if (swimMomentum == maxMomentum)
+                animator.SetTrigger("Swim");
         }
         if (isSwimming)
         {
