@@ -12,15 +12,19 @@ public class MenuButton : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        lastLevel = SceneManager.sceneCount;
+        lastLevel = SceneManager.sceneCountInBuildSettings -1;
+        level = SceneManager.GetActiveScene().buildIndex;
     }
 
     public void StartGame()
     {
-        if (level < lastLevel)
+        if (level != lastLevel)
             level++;
         if (level == lastLevel)
             noMoreLevel = true;
+        GameState.win = false;
+        GameState.loose = false;
+        GameState.gameDone = false;
         SceneManager.LoadScene(level);
     }
 
