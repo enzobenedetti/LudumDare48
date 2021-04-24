@@ -37,11 +37,9 @@ public class GameState : MonoBehaviour
     public static void GameLost()
     {
         loose = true;
-        Debug.Log("Lost");
     }
     public static void GameWin()
     {
         win = true;
-        Debug.Log("Win");
     }
 }
