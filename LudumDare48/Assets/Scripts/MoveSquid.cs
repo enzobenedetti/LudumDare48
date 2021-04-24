@@ -7,7 +7,7 @@ public class MoveSquid : MonoBehaviour
 {
     private GameObject squid;
 
-    private Vector3 mousePosition;
+    private Animator animator;
 
     [SerializeField]
     private float speed = 3f;
@@ -22,6 +22,7 @@ public class MoveSquid : MonoBehaviour
     {
         squid = this.gameObject;
         swimMomentum = maxMomentum;
+        animator = this.GetComponent<Animator>();
     }
 
     // Start is called before the first frame update
@@ -42,6 +43,7 @@ public class MoveSquid : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             isSwimming = true;
+            animator.SetTrigger("Swim");
         }
         if (isSwimming)
         {
@@ -53,6 +55,7 @@ public class MoveSquid : MonoBehaviour
             if (Input.GetMouseButton(0))
             {
                 isSwimming = true;
+                animator.SetTrigger("Swim");
             }
             else
                 isSwimming = false;

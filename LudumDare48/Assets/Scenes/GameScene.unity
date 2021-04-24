@@ -163,7 +163,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   squid: {fileID: 841211913}
-  speed: 3.5
+  speed: 3
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -343,6 +343,7 @@ GameObject:
   - component: {fileID: 841211916}
   - component: {fileID: 841211917}
   - component: {fileID: 841211918}
+  - component: {fileID: 841211919}
   m_Layer: 0
   m_Name: Squid
   m_TagString: Untagged
@@ -466,3 +467,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!95 &841211919
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 841211913}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2e1073f0a23a7034fa5acd90731fcd2e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
