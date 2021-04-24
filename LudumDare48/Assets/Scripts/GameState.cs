@@ -10,10 +10,12 @@ public class GameState : MonoBehaviour
     public static bool win = false;
     [HideInInspector]
     public static bool loose = false;
+    [HideInInspector]
+    public static bool gameDone = false;
 
     [SerializeField]
     private GameObject octopus;
-    
+
 
     // Start is called before the first frame update
     void Start()
@@ -24,8 +26,12 @@ public class GameState : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(1))
+        if (Input.GetMouseButtonDown(1) && !loose && !win)
             gamePaused = !gamePaused;
+        if (win || loose)
+        {
+            gameDone = true;
+        }
     }
 
     public static void GameLost()

@@ -6,16 +6,24 @@ public class UIManager : MonoBehaviour
 {
     [SerializeField]
     private GameObject pause;
+    [SerializeField]
+    private GameObject win;
+    [SerializeField]
+    private GameObject lost;
 
     // Start is called before the first frame update
     void Start()
     {
         pause.SetActive(false);
+        win.SetActive(false);
+        lost.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
         pause.SetActive(GameState.gamePaused);
+        win.SetActive(GameState.win);
+        lost.SetActive(GameState.loose);
     }
 }

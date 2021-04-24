@@ -34,36 +34,45 @@ public class MoveSquid : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector3 squidPosition = Camera.main.WorldToScreenPoint(squid.transform.position);
-        Vector3 direction = Input.mousePosition - squidPosition;
-        direction.z = 0f;
+        if (!GameState.gamePaused)
+        {
+            animator.enabled = true;
+            Vector3 squidPosition = Camera.main.WorldToScreenPoint(squid.transform.position);
+            Vector3 direction = Input.mousePosition - squidPosition;
+            direction.z = 0f;
 
-        SetSquidRotation(direction);
+            if (!GameState.gameDone)
+                SetSquidRotation(direction);
 
-        if (Input.GetMouseButtonDown(0))
-        {
-            isSwimming = true;
-            if (swimMomentum == maxMomentum)
-                animator.SetTrigger("Swim");
-        }
-        if (isSwimming)
-        {
-            swimSpeed = speed * swimMomentum / maxMomentum;
-            swimMomentum -= Time.deltaTime;
-        }
-        if (swimMomentum <= 0f)
-        {
-            if (Input.GetMouseButton(0))
+            if (Input.GetMouseButtonDown(0) && !GameState.gameDone)
             {
                 isSwimming = true;
-                animator.SetTrigger("Swim");
+                if (swimMomentum == maxMomentum)
+                    animator.SetTrigger("Swim");
             }
-            else
-                isSwimming = false;
-            swimMomentum = maxMomentum;
+            if (isSwimming)
+            {
+                swimSpeed = speed * swimMomentum / maxMomentum;
+                swimMomentum -= Time.deltaTime;
+            }
+            if (swimMomentum <= 0f)
+            {
+                if (Input.GetMouseButton(0) && !GameState.gameDone)
+                {
+                    isSwimming = true;
+                    animator.SetTrigger("Swim");
+                }
+                else
+                    isSwimming = false;
+                swimMomentum = maxMomentum;
+            }
+            if (isSwimming)
+                squid.transform.position += direction.normalized * swimSpeed * Time.deltaTime;
         }
-        if (isSwimming)
-            squid.transform.position += direction.normalized * swimSpeed * Time.deltaTime;
+        else
+        {
+            animator.enabled = false;
+        }
     }
 
     private void SetSquidRotation(Vector3 direction)
