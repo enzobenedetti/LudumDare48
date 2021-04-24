@@ -35,6 +35,7 @@ public class MoveSquid : MonoBehaviour
     {
         Vector3 squidPosition = Camera.main.WorldToScreenPoint(squid.transform.position);
         Vector3 direction = Input.mousePosition - squidPosition;
+        direction.z = 0f;
 
         SetSquidRotation(direction);
 
@@ -57,7 +58,8 @@ public class MoveSquid : MonoBehaviour
                 isSwimming = false;
             swimMomentum = maxMomentum;
         }
-        squid.transform.position += direction.normalized * swimSpeed * Time.deltaTime;
+        if (isSwimming)
+            squid.transform.position += direction.normalized * swimSpeed * Time.deltaTime;
     }
 
     private void SetSquidRotation(Vector3 direction)
