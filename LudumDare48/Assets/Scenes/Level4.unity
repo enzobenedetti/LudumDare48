@@ -2093,6 +2093,80 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 309031945103205236, guid: 3b884d85c5cf575408e501a9ee97ec52, type: 3}
   m_PrefabInstance: {fileID: 729115787}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &771461125
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1988378433}
+    m_Modifications:
+    - target: {fileID: 530850984375206966, guid: cd7e666559831e64abc91a48089beb2d, type: 3}
+      propertyPath: m_Name
+      value: RockA (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5761028324978745035, guid: cd7e666559831e64abc91a48089beb2d, type: 3}
+      propertyPath: m_RootOrder
+      value: 33
+      objectReference: {fileID: 0}
+    - target: {fileID: 5761028324978745035, guid: cd7e666559831e64abc91a48089beb2d, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.22309999
+      objectReference: {fileID: 0}
+    - target: {fileID: 5761028324978745035, guid: cd7e666559831e64abc91a48089beb2d, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.22309999
+      objectReference: {fileID: 0}
+    - target: {fileID: 5761028324978745035, guid: cd7e666559831e64abc91a48089beb2d, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.2231
+      objectReference: {fileID: 0}
+    - target: {fileID: 5761028324978745035, guid: cd7e666559831e64abc91a48089beb2d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 21.499992
+      objectReference: {fileID: 0}
+    - target: {fileID: 5761028324978745035, guid: cd7e666559831e64abc91a48089beb2d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -26.900002
+      objectReference: {fileID: 0}
+    - target: {fileID: 5761028324978745035, guid: cd7e666559831e64abc91a48089beb2d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 41.39983
+      objectReference: {fileID: 0}
+    - target: {fileID: 5761028324978745035, guid: cd7e666559831e64abc91a48089beb2d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.11288704
+      objectReference: {fileID: 0}
+    - target: {fileID: 5761028324978745035, guid: cd7e666559831e64abc91a48089beb2d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5761028324978745035, guid: cd7e666559831e64abc91a48089beb2d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5761028324978745035, guid: cd7e666559831e64abc91a48089beb2d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.9936079
+      objectReference: {fileID: 0}
+    - target: {fileID: 5761028324978745035, guid: cd7e666559831e64abc91a48089beb2d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5761028324978745035, guid: cd7e666559831e64abc91a48089beb2d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5761028324978745035, guid: cd7e666559831e64abc91a48089beb2d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -167.036
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: cd7e666559831e64abc91a48089beb2d, type: 3}
+--- !u!4 &771461126 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5761028324978745035, guid: cd7e666559831e64abc91a48089beb2d, type: 3}
+  m_PrefabInstance: {fileID: 771461125}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &774396217
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2458,7 +2532,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 1, g: 0.9882353, b: 0.22352941, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -3079,7 +3153,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 1, g: 0.9882353, b: 0.22352941, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -4857,7 +4931,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 1, g: 0.9882353, b: 0.22352941, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -5072,6 +5146,7 @@ Transform:
   - {fileID: 2137515910}
   - {fileID: 435156090}
   - {fileID: 181805754}
+  - {fileID: 771461126}
   m_Father: {fileID: 0}
   m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
