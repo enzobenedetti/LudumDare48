@@ -16,6 +16,11 @@ public class BackgroundColor : MonoBehaviour
     [SerializeField]
     private Color endColor;
 
+    [SerializeField]
+    private float backgroundTranslation = 5.7f;
+    [SerializeField]
+    private GameObject backGround;
+
     Vector2 startPos;
     float distance;
 
@@ -30,5 +35,6 @@ public class BackgroundColor : MonoBehaviour
     void Update()
     {
         Camera.main.backgroundColor = Color.Lerp(endColor, startColor, Vector2.Distance(squid.transform.position, goal.transform.position) / distance);
+        backGround.transform.localPosition = new Vector3(0f, Mathf.Lerp(backgroundTranslation, -backgroundTranslation, Vector2.Distance(squid.transform.position, goal.transform.position) / distance), 10f);
     }
 }
