@@ -18,11 +18,14 @@ public class MoveSquid : MonoBehaviour
     private float swimMomentum;
     private bool isSwimming = false;
 
+    AudioSource audio;
+
     private void Awake()
     {
         squid = this.gameObject;
         swimMomentum = maxMomentum;
         animator = this.GetComponent<Animator>();
+        audio = this.GetComponent<AudioSource>();
     }
 
     // Start is called before the first frame update
@@ -48,7 +51,10 @@ public class MoveSquid : MonoBehaviour
             {
                 isSwimming = true;
                 if (swimMomentum == maxMomentum)
+                {
                     animator.SetTrigger("Swim");
+                    audio.Play();
+                }
             }
             if (isSwimming)
             {
@@ -61,6 +67,7 @@ public class MoveSquid : MonoBehaviour
                 {
                     isSwimming = true;
                     animator.SetTrigger("Swim");
+                    audio.Play();
                 }
                 else
                     isSwimming = false;

@@ -19,8 +19,11 @@ public class MoveCamera : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector3 direction = octopus.transform.position - this.transform.position;
-        direction.z = 0f;
-        this.transform.position += direction.normalized * speed * Time.deltaTime;
+        if (Vector2.Distance(octopus.transform.position, this.transform.position) > 0.1f)
+        {
+            Vector3 direction = octopus.transform.position - this.transform.position;
+            direction.z = 0f;
+            this.transform.position += direction.normalized * speed * Time.deltaTime;
+        }
     }
 }
