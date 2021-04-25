@@ -21,9 +21,18 @@ public class MoveCamera : MonoBehaviour
     {
         if (Vector2.Distance(octopus.transform.position, this.transform.position) > 0.1f)
         {
-            Vector3 direction = octopus.transform.position - this.transform.position;
-            direction.z = 0f;
-            this.transform.position += direction.normalized * speed * Time.deltaTime;
+            if (Vector2.Distance(octopus.transform.position, this.transform.position) > 0.5f)
+            {
+                Vector3 direction = octopus.transform.position - this.transform.position;
+                direction.z = 0f;
+                this.transform.position += direction.normalized * speed * Time.deltaTime;
+            }
+            else
+            {
+                Vector3 direction = octopus.transform.position - this.transform.position;
+                direction.z = 0f;
+                this.transform.position += direction.normalized * (speed/5f) * Time.deltaTime;
+            }
         }
     }
 }
