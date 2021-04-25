@@ -6,13 +6,13 @@ public class GlobeSound : MonoBehaviour
 {
     private AudioSource audio;
 
-    [SerializeField]
     private GameObject octopus;
 
     // Start is called before the first frame update
     void Start()
     {
         audio = this.GetComponent<AudioSource>();
+        octopus = GameObject.FindGameObjectWithTag("Player");
     }
 
     // Update is called once per frame
