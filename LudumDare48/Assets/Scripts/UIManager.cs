@@ -12,6 +12,8 @@ public class UIManager : MonoBehaviour
     private GameObject lost;
     [SerializeField]
     private GameObject nextButton;
+    [SerializeField]
+    private GameObject endButton;
 
     // Start is called before the first frame update
     void Start()
@@ -30,6 +32,12 @@ public class UIManager : MonoBehaviour
         if (MenuButton.noMoreLevel)
         {
             nextButton.SetActive(false);
+            endButton.SetActive(true);
+        }
+        else
+        {
+            nextButton.SetActive(true);
+            endButton.SetActive(false);
         }
     }
 }
