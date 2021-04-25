@@ -30,6 +30,9 @@ public class MenuButton : MonoBehaviour
 
     public void RetartLevel()
     {
+        GameState.win = false;
+        GameState.loose = false;
+        GameState.gameDone = false;
         SceneManager.LoadScene(level);
     }
 

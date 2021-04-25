@@ -16,18 +16,22 @@ public class GameState : MonoBehaviour
     [SerializeField]
     private GameObject octopus;
 
+    AudioSource audioPause;
 
-    // Start is called before the first frame update
-    void Start()
+
+    void Awake()
     {
-        
+        audioPause = this.GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
     void Update()
     {
         if (Input.GetButtonDown("Pause") && !loose && !win)
+        {
             gamePaused = !gamePaused;
+            audioPause.Play();
+        }
         if (win || loose)
         {
             gameDone = true;
